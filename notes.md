@@ -1,15 +1,3 @@
-# Фишки
-Верстка листинга категории, делая брейки через nth-child (см. PC parts)
-
-    @media only screen and (min-width: 1280px) {
-            .itemgrid-adaptive.itemgrid-3col .item:nth-child(4n+1) {
-            clear: left !important;
-        }
-    }
-
-Так можнолучше контролировать ширину экрана и делать брейки по 4, 2 и 1 товара на строку.
-
-
 # Operators
 Unary,
 Binary,
