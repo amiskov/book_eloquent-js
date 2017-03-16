@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<pre>
+Из книжки:
+Write a loop that makes seven calls to console.log to output the following triangle:
+
+#
+##
+###
+####
+#####
+######
+#######
+
+Моя версия:
+</pre>
+	<pre id="pyramid"></pre>
+	<script>
+		function addChar(char) {
+			pyramid.innerHTML = pyramid.innerHTML + char;
+		}
+
+		var sign = '#', space = ' ', total = 21;
+
+		/*
+		var lines = [];
+		var singsInLine = total;
+
+		while(singsInLine > 0) {
+			lines.push(singsInLine);
+			singsInLine -= 2;
+		}
+
+		lines.forEach(function(signsQty, index) {
+			var spaces = (total - signsQty) / 2;
+
+			while(spaces > 0) {
+				addChar(space);
+				spaces--;
+			}
+
+			while(signsQty > 0) {
+				addChar(sign);
+				signsQty--;
+			}
+
+			addChar('\n')
+		});
+*/
+
+	for (var counter = 0; counter <= total; counter++) {
+
+		var firstSignPosition = Math.ceil(total/2) - counter;
+
+		if(firstSignPosition <= 0) {
+			break;
+		}
+
+		var lineCounter = 1;
+		while(lineCounter <= total) {
+			if(lineCounter < firstSignPosition) {
+				addChar(space);		
+			} else if (lineCounter < (total - firstSignPosition + 2)) {
+				addChar(sign);		
+			}
+
+			lineCounter++;
+		}
+		pyramid.innerHTML = pyramid.innerHTML + '\n';		
+	}
+	</script>
+</body>
+</html>

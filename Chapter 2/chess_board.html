@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<pre id="board"></pre>
+<script>
+	var size = 8;
+	var lines = '';
+
+	for (var y = 0; y < size; y++) {
+		for (var x = 0; x < size; x++) {
+			lines += ((x + y) % 2 == 0) ? '_' : 'x';
+		}
+		lines += '\n';
+	}
+
+	board.innerHTML = board.innerHTML + lines;
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function range(start, end, step) {
+        var range = [];
+
+        if (arguments.length < 3 && start > end) { // go downward if start id more than end. E. g. [5, 2]
+            step = -1;
+        } else {
+            step = (step !== undefined && step != 0) ? step : 1;
+        }
+
+        if (step > 0) {
+            for (var j = start; j <= end; j += step) {
+                range.push(j);
+            }
+        } else {
+            for (var i = start; i >= end; i += step) {
+                range.push(i);
+            }
+        }
+        return range;
+    }
+    function sum(range) {
+        var sum = 0;
+        range.forEach(function (el) {
+            sum += el;
+        });
+        return sum;
+    }
+</script>
+</body>
+</html>
+

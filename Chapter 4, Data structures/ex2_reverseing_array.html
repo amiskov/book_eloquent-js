@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //    function reverseArray(arr) {
+    //        var reversed = [];
+    //        for (var i = arr.length - 1; i >= 0; i--) {
+    //            reversed.push(arr[i]);
+    //        }
+    //        return reversed;
+    //    }
+
+    function reverseArray(arr) {
+        var reversed = [];
+        for (var i = 0; i < arr.length; i++) {
+            reversed.unshift(arr[i]);
+        }
+        return reversed;
+    }
+
+    //    function reverseArrayInPlace(arr) {
+    //        var reversed = reverseArray(arr);
+    //        arr.forEach(function (el, index) {
+    //            arr[index] = reversed[index];
+    //        });
+    //    }
+    function reverseArrayInPlace(arr) {
+        for (var i = 0; i < Math.floor(arr.length / 2); i++) {
+            var tempStart = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = tempStart;
+        }
+    }
+</script>
+</body>
+</html>

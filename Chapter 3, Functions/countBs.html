@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function countBs (str) {
+			return countChar(str, 'B');
+		}
+
+		function countChar(str, char) {
+			var count = 0;
+			for (var i = 0; i < str.length; i++) {
+				count = (str[i] == char) ? (count + 1) : count;
+			}
+			return count;
+		}
+	</script>
+</body>
+</html>
